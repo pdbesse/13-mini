@@ -1,4 +1,4 @@
-const {Model, Datatypes } = require('sequelize');
+const {Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Location extends Model {}
@@ -6,12 +6,12 @@ class Location extends Model {}
 Location.init(
     {
         id: {
-            type: Datatypes.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         name: {
-            type: Datatypes.STRING
+            type: DataTypes.STRING
         }
     },
     {

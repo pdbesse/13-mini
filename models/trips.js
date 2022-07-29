@@ -1,4 +1,4 @@
-const {Model, Datatypes } = require('sequelize');
+const {Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Trips extends Model {}
@@ -6,25 +6,25 @@ class Trips extends Model {}
 Trips.init(
     {
         id: {
-            type: Datatypes.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         trip_budget: {
-            type: Datatypes.INTEGER
+            type: DataTypes.INTEGER
         },
         traveler_amount: {
-            type: Datatypes.INTEGER
+            type: DataTypes.INTEGER
         },
         traveler_id: {
-            type: Datatypes.INTEGER,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'traveler',
                 key: 'id'
             },
         },
         location_id: {
-            type: Datatypes.INTEGER,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'location',
                 key: 'id'

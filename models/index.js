@@ -9,3 +9,9 @@ Traveler.belongsToMany(Location, {
 Location.belongsToMany(Traveler, {
     through: Trips
 });
+
+module.exports = {
+    Traveler,
+    Location,
+    Trips
+}
